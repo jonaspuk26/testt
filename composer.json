@@ -1,0 +1,30 @@
+{
+  "require": {
+    "codeception/codeception": "^5.1",
+    "codeception/module-phpbrowser": "*",
+    "facebook/webdriver": "^1.1",
+    "php-di/php-di": "^7.0",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "files": [
+      "bootstrap.php"
+    ],
+    "psr-4": {
+      "Pages\\": "tests/Pages",
+      "Tests\\Support\\": "tests/Support",
+      "Api\\": "tests/Api",
+      "Entities\\": "tests/Entities",
+      "Dotenv\\": "tests/"
+    }
+  },
+  "scripts": {
+    "run-acceptance": "vendor/bin/codecept run Acceptance tests/Acceptance -d --html",
+    "run-api": "php vendor/bin/codecept run Api tests/Api/ -d --html"
+  },
+  "require-dev": {
+    "codeception/module-webdriver": "^4.0",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-rest": "^3.4"
+  }
+}

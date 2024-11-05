@@ -1,0 +1,6 @@
+actor: ApiTester
+modules:
+  enabled:
+  - REST:
+      url: 'https://pos-tst.wallmob.com'
+      depends: PhpBrowser
